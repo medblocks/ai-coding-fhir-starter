@@ -1,0 +1,165 @@
+# Patient Listing Application
+
+Every time you choose to apply a rule(s), explicitly state the rule(s) in the output. You can abbreviate the rule description to a single word or phrase.
+
+## Project Context
+
+A SvelteKit-based patient listing application that integrates with HAPI FHIR server
+
+- Manages and displays patient records
+- Interfaces with HAPI FHIR for healthcare data
+- Provides a modern, responsive UI for healthcare professionals
+
+## Code Style and Structure
+
+- Write concise, technical TypeScript code with accurate examples
+- Use functional and declarative programming patterns
+- Prefer iteration and modularization over code duplication
+- Use descriptive variable names with auxiliary verbs (e.g., isLoading, hasError)
+- Structure repository files as follows:
+
+```
+src/
+├── lib/            # Shared components and utilities
+│   ├── components/ # Reusable Svelte components
+│   ├── server/     # Server-only code
+│   ├── types/      # TypeScript types
+│   ├── utils/      # Helper functions
+│   └── fhir/       # FHIR related utilities
+├── routes/         # SvelteKit routes (+page.svelte, +server.ts)
+├── params/         # SvelteKit parameter matchers
+├── hooks.server.ts # Server hooks
+└── app.html        # App template
+
+static/            # Static assets
+tests/             # Test files
+```
+
+## Tech Stack
+
+- SvelteKit
+- TypeScript
+- Tailwind CSS
+- HAPI FHIR
+- Docker
+- PostgreSQL
+
+## Naming Conventions
+
+- Use lowercase with dashes for directories (e.g., components/patient-card)
+- Use PascalCase for component files (e.g., PatientList.svelte)
+- Use camelCase for utility files (e.g., fhirUtils.ts)
+- Use +page.svelte for route pages
+- Use +server.ts for API endpoints
+
+## TypeScript Usage
+
+- Use TypeScript for all code; prefer interfaces over types
+- Avoid enums; use const objects with 'as const' assertion
+- Use proper FHIR resource types from @types/fhir
+- Use $lib alias for imports from lib directory
+- Avoid try/catch blocks unless there's good reason to translate or handle error
+- Use explicit return types for all functions
+- Implement proper type safety for form data
+
+## SvelteKit Specific
+
+- Use proper load functions (+page.server.ts)
+- Implement form actions appropriately
+- Handle server-side rendering properly
+- Use proper error pages (+error.svelte)
+- Implement proper client-side navigation
+- Use proper environment variables ($env/static/private)
+
+## State Management
+
+- Use Svelte stores for global state
+- Implement proper reactive statements
+- Use proper lifecycle methods
+- Handle subscription cleanup properly
+
+## Syntax and Formatting
+
+- Use "export function" for pure functions
+- Follow Svelte component structure (script, style, markup)
+- Use reactive declarations ($:) appropriately
+- Use proper event dispatching
+- Implement TypeScript discriminated unions where needed
+
+## UI and Styling
+
+- Use Tailwind CSS for styling
+- Implement responsive design patterns
+- Follow healthcare UI/UX best practices
+- Consider accessibility requirements
+- Use proper loading states
+- Implement proper error states
+
+## FHIR Integration
+
+- Use proper FHIR resource types
+- Implement proper FHIR search parameters
+- Handle FHIR versioning appropriately
+- Implement proper FHIR validation
+- Use proper FHIR operations
+
+## Error Handling
+
+- Implement proper error pages
+- Log errors appropriately for debugging
+- Provide user-friendly error messages
+- Handle network failures gracefully
+- Implement proper validation errors
+
+## Testing
+
+- Write unit tests for utilities and components
+- Implement integration tests for FHIR operations
+- Test across different browsers
+- Test performance and loading states
+- Implement proper mock data for tests
+
+## Security
+
+- Implement proper CORS handling
+- Sanitize user inputs
+- Handle sensitive health data properly
+- Follow HIPAA compliance guidelines
+- Implement proper authentication
+
+## Git Usage
+
+Commit Message Prefixes:
+
+- "fix:" for bug fixes
+- "feat:" for new features
+- "perf:" for performance improvements
+- "docs:" for documentation changes
+- "style:" for formatting changes
+- "refactor:" for code refactoring
+- "test:" for adding missing tests
+- "chore:" for maintenance tasks
+
+Rules:
+
+- Use lowercase for commit messages
+- Keep the summary line concise
+- Include description for non-obvious changes
+- Reference issue numbers when applicable
+
+## Documentation
+
+- Maintain clear README with setup instructions
+- Document FHIR interactions and data flows
+- Document environment variables
+- Don't include comments unless it's for complex logic
+- Document HAPI FHIR configuration
+
+## Development Workflow
+
+- Use proper version control
+- Implement proper code review process
+- Test in multiple environments
+- Follow semantic versioning for releases
+- Maintain changelog
+- Use proper Docker development workflow
