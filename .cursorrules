@@ -1,10 +1,14 @@
 # Patient Listing Application
-
+ 
 Every time you choose to apply a rule(s), explicitly state the rule(s) in the output. You can abbreviate the rule description to a single word or phrase.
+
+## Instructions about dependencies and libraries 
+
+The project already contains all starter dependencies of svelte, tailwindcss, and typescript. So there is no need to reinitialize the app from scratch. Only install new libraries and dependencies required as part of the added code. 
 
 ## Project Context
 
-A SvelteKit-based patient listing application that integrates with HAPI FHIR server
+A SvelteKit-based patient listing application that integrates with HAPI FHIR server.
 
 - Manages and displays patient records
 - Interfaces with HAPI FHIR for healthcare data
@@ -121,11 +125,7 @@ tests/             # Test files
 
 ## Security
 
-- Implement proper CORS handling
-- Sanitize user inputs
-- Handle sensitive health data properly
-- Follow HIPAA compliance guidelines
-- Implement proper authentication
+- Validate user inputs depending on the type of input fields
 
 ## Git Usage
 
